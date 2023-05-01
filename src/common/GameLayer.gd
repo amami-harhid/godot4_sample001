@@ -1,9 +1,39 @@
 extends Node
 
 var layer_games:CanvasLayer
+const Game_Max_Level:int = 3
+const Game_First_Level:int = 1
+const Game_Undefined_Level:int = -1
+
+var _level:int
 
 func setup(_layer: CanvasLayer):
 	layer_games = _layer
+	_level = Game_Undefined_Level
+	Buttons.hide()
+	Messages.hide()
+	
+func set_level(_l : int):
+	_level = _l
+
+func clear_level():
+	Buttons.show()
+	Messages.show()
+
+func load_game():
+	var _caller = Callable(self, "level_up")
+	Commons.sleep(0.5, _caller)
+
+func level_up():
+	if _level == Game_Undefined_Level :
+		_level = Game_First_Level
+	elif _level < Game_Max_Level :
+		_level += 1
+	else:
+		_level = Game_First_Level
+	_load_game(_level)
+	Messages.hide()
+	Buttons.hide()
 
 func _load_game(_level:int):
 	var _child_count = layer_games.get_child_count()
@@ -18,15 +48,19 @@ func _load_game(_level:int):
 	var _level_obj = _level_res.instantiate()
 	layer_games.add_child(_level_obj)
 	layer_games.show()
+	Player.set_level_scene(_level_obj)
 	var _tile_design:TileMap = _level_obj.get_node("./design")
-	Messages.text("レベル%02d クリア"%_level)
-	pass
+	Messages.createMessage(_level)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func hide():
+	layer_games.hide()
 
+func show():
+	layer_games.show()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func game_close():
+	hide()
+	Messages.hide()
+	Buttons.hide()
+	Commons.window_close()
+

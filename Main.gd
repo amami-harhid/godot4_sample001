@@ -24,16 +24,16 @@ extends Node2D
 #var _level = 1
 
 func _ready():
-	Commons.init(self)
+	Commons.set_main(self)
 	Commons.set_view_port_size(view_port_size)
-	Commons.set_layer_background(layer_background)
-	Commons.set_layer_games(layer_games)
-	Commons.set_layer_message(layer_message)
-	Commons.set_layer_buttons(layer_buttons)
-	Commons.load_game()
+	Background.setup(layer_background)
+	Messages.setup(layer_message)
+	Buttons.setup(layer_buttons)
 	Player.setup(player)
+	GameLayer.setup(layer_games)
+	GameLayer.load_game()
 
 func _process(delta):
-	
+	Player.player_move()
 	pass
 

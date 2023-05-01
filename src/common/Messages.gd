@@ -5,7 +5,7 @@ var layer_message:CanvasLayer
 var label_message:Label
 var _view_port_size:Vector2
 
-func set_layer_message(_layer:CanvasLayer):
+func setup(_layer:CanvasLayer):
 	layer_message = _layer
 	label_message = layer_message.get_node('LabelMessage')
 	_view_port_size = layer_message.get_viewport().get_window().size
@@ -20,5 +20,15 @@ func _message_setup():
 	label_message.position = _view_port_size / 2
 	label_message.add_theme_font_size_override("font_size",80)
 
-func text(_message:String):
+const Game_Clear = "ゲームクリア(%02d)"
+func createMessage(_level:int):
+	_text(Game_Clear%_level)
+	
+func _text(_message:String):
 	label_message.text = _message
+
+func show():
+	layer_message.show()
+
+func hide():
+	layer_message.hide()
