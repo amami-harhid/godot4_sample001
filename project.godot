@@ -21,8 +21,15 @@ Commons="*res://src/common/Commons.gd"
 Messages="*res://src/common/Messages.gd"
 Buttons="*res://src/common/Buttons.gd"
 Player="*res://src/common/Player.gd"
+GameLayer="*res://src/common/GameLayer.gd"
+Background="*res://src/common/Background.gd"
+Fonts="*res://src/common/Fonts.gd"
 
 [display]
 
 window/size/viewport_width=896
 window/size/viewport_height=640
+
+[editor]
+
+run/main_run_args="--rendering-driver opengl3"
