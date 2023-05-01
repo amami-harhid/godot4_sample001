@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://g0w5hk3ckwvd" path="res://assets/imgs/floor_tile_set.tres" id="1_ferx6"]
 [ext_resource type="TileSet" uid="uid://d2g8g483vojox" path="res://assets/imgs/design_tile_set.tres" id="2_ffkaq"]
 
-[node name="level01" type="Node2D"]
+[node name="game" type="Node2D"]
 
 [node name="floor" type="TileMap" parent="."]
 tile_set = ExtResource("1_ferx6")

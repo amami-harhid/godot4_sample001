@@ -15,6 +15,13 @@ run/main_scene="res://src/resources/Main.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Commons="*res://src/common/Commons.gd"
+Messages="*res://src/common/Messages.gd"
+Buttons="*res://src/common/Buttons.gd"
+Player="*res://src/common/Player.gd"
+
 [display]
 
 window/size/viewport_width=896

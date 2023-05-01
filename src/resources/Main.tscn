@@ -1,18 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://rgxrq8qmfpb7"]
+[gd_scene load_steps=4 format=3 uid="uid://rgxrq8qmfpb7"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_qsujg"]
+[ext_resource type="Texture2D" uid="uid://7i0e1qb4olxy" path="res://assets/imgs/player.png" id="2_vixvc"]
 [ext_resource type="Theme" uid="uid://bru6vo1y5khug" path="res://src/resources/Main_theme.tres" id="3_yr80j"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_qsujg")
 
-[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+[node name="LayerBackground" type="CanvasLayer" parent="."]
 
-[node name="GameLayer" type="CanvasLayer" parent="."]
+[node name="LayerGames" type="CanvasLayer" parent="."]
 
-[node name="MessageLayer" type="CanvasLayer" parent="."]
+[node name="LayerPlayer" type="CanvasLayer" parent="."]
 
-[node name="MessageLabel" type="Label" parent="MessageLayer"]
+[node name="PlayerSprite2D" type="Sprite2D" parent="LayerPlayer"]
+texture = ExtResource("2_vixvc")
+hframes = 4
+vframes = 4
+
+[node name="LayerMessage" type="CanvasLayer" parent="."]
+
+[node name="LabelMessage" type="Label" parent="LayerMessage"]
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("3_yr80j")
@@ -24,17 +32,18 @@ theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
 
-[node name="ButtonLayer" type="CanvasLayer" parent="."]
+[node name="LayerButtons" type="CanvasLayer" parent="."]
 
-[node name="MenuButton" type="MenuButton" parent="ButtonLayer"]
+[node name="MenuButton" type="MenuButton" parent="LayerButtons"]
 offset_right = 8.0
 offset_bottom = 8.0
 theme = ExtResource("3_yr80j")
 text = "ゲーム選択"
-switch_on_hover = true
-item_count = 2
+item_count = 3
 popup/item_0/text = "次のレベルへ"
 popup/item_0/checked = true
 popup/item_0/id = 0
-popup/item_1/text = "おわり"
+popup/item_1/text = "さいしょから"
 popup/item_1/id = 1
+popup/item_2/text = "おわり"
+popup/item_2/id = 2
