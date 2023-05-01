@@ -29,9 +29,9 @@ func _ready():
 	Background.setup(layer_background)
 	Messages.setup(layer_message)
 	Buttons.setup(layer_buttons)
-	Player.setup(player)
 	GameLayer.setup(layer_games)
 	GameLayer.load_game()
+	Player.setup(player)
 
 func _process(delta):
 	Player.player_move()
