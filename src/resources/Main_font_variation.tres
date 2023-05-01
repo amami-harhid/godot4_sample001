@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bb80ddlwhqqf7"]
+
+[ext_resource type="FontFile" uid="uid://bdmle2w8l7k02" path="res://fonts/NicoMoji/NicoMoji-Regular.ttf" id="1_vesqk"]
+
+[resource]
+base_font = ExtResource("1_vesqk")

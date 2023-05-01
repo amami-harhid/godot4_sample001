@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://rgxrq8qmfpb7"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_qsujg"]
+[ext_resource type="Theme" uid="uid://bru6vo1y5khug" path="res://src/resources/Main_theme.tres" id="3_yr80j"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qsujg")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+
+[node name="GameLayer" type="CanvasLayer" parent="."]
+
+[node name="MessageLayer" type="CanvasLayer" parent="."]
+
+[node name="MessageLabel" type="Label" parent="MessageLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("3_yr80j")
+theme_override_colors/font_color = Color(0.992157, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuButton" type="MenuButton" parent="ButtonLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("3_yr80j")
+text = "ゲーム選択"
+switch_on_hover = true
+item_count = 2
+popup/item_0/text = "次のレベルへ"
+popup/item_0/checked = true
+popup/item_0/id = 0
+popup/item_1/text = "おわり"
+popup/item_1/id = 1

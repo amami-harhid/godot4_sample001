@@ -1,0 +1,67 @@
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://d2g8g483vojox"]
+
+[ext_resource type="Texture2D" uid="uid://dudv4bmouuqo6" path="res://assets/imgs/wall.png" id="1_o4rvl"]
+[ext_resource type="Texture2D" uid="uid://cffuudkrsy1ny" path="res://assets/imgs/grasses.png" id="2_i4j54"]
+[ext_resource type="Texture2D" uid="uid://droeckf8ydirw" path="res://assets/imgs/teleport.png" id="3_u7unj"]
+[ext_resource type="Texture2D" uid="uid://bdr3t3lvy4qq8" path="res://assets/imgs/door.png" id="4_1ybc0"]
+[ext_resource type="Texture2D" uid="uid://deytn8fc728uj" path="res://assets/imgs/levers.png" id="5_ef0vf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g7bsi"]
+resource_name = "Wall"
+texture = ExtResource("1_o4rvl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/custom_data_0 = "Wall"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nv48"]
+resource_name = "Grasses"
+texture = ExtResource("2_i4j54")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/custom_data_0 = "Grass_Right"
+1:0/0 = 0
+1:0/0/custom_data_0 = "Grass_Up"
+2:0/0 = 0
+2:0/0/custom_data_0 = "Grass_Down"
+3:0/0 = 0
+3:0/0/custom_data_0 = "Grass_Left"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdoof"]
+resource_name = "Teleports"
+texture = ExtResource("3_u7unj")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/0/custom_data_0 = "Teleport"
+0:0/1 = 1
+0:0/1/custom_data_0 = "Teleport_1"
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/modulate = Color(1, 0.776471, 1, 1)
+0:0/2/custom_data_0 = "Teleport_2"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixj22"]
+resource_name = "Door"
+texture = ExtResource("4_1ybc0")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/custom_data_0 = "Door"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elk0v"]
+resource_name = "Levers"
+texture = ExtResource("5_ef0vf")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/custom_data_0 = "Lever_Off"
+1:0/0 = 0
+1:0/0/custom_data_0 = "Lever_On"
+
+[resource]
+tile_size = Vector2i(64, 64)
+custom_data_layer_0/name = "タイル種別"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_g7bsi")
+sources/1 = SubResource("TileSetAtlasSource_8nv48")
+sources/2 = SubResource("TileSetAtlasSource_vdoof")
+sources/3 = SubResource("TileSetAtlasSource_ixj22")
+sources/4 = SubResource("TileSetAtlasSource_elk0v")

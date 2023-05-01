@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bru6vo1y5khug"]
+
+[ext_resource type="FontVariation" uid="uid://bb80ddlwhqqf7" path="res://src/resources/Main_font_variation.tres" id="1_meysm"]
+
+[resource]
+default_font = ExtResource("1_meysm")
