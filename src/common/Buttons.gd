@@ -28,16 +28,16 @@ func _menu_setup():
 func _menu_click(id):
 	if id == 0 : # レベルアップ
 		var _caller = Callable(GameLayer,"level_up")
-		Commons.sleep(0.3, _caller)
+		Commons.one_shot_timer(0.3, _caller)
 		
 	elif id == 1 : # 最初から
 		GameLayer.set_level(GameLayer.Game_Undefined_Level)
 		var _caller = Callable(GameLayer,"level_up")
-		Commons.sleep(0.3, _caller)
+		Commons.one_shot_timer(0.3, _caller)
 	elif id == 2 : # 終了
 		# 0.3 秒後に終了する
 		var _caller = Callable(Commons,"close")
-		Commons.sleep(0.3, _caller)
+		Commons.one_shot_timer(0.3, _caller)
 
 func hide():
 	layer_buttons.hide()

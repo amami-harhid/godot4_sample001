@@ -14,17 +14,17 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/custom_data_0 = "Wall"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nv48"]
-resource_name = "Grasses"
+resource_name = "Arrows"
 texture = ExtResource("2_i4j54")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
-0:0/0/custom_data_0 = "Grass_Right"
+0:0/0/custom_data_0 = "Arrow_Right"
 1:0/0 = 0
-1:0/0/custom_data_0 = "Grass_Up"
+1:0/0/custom_data_0 = "Arrow_Up"
 2:0/0 = 0
-2:0/0/custom_data_0 = "Grass_Down"
+2:0/0/custom_data_0 = "Arrow_Down"
 3:0/0 = 0
-3:0/0/custom_data_0 = "Grass_Left"
+3:0/0/custom_data_0 = "Arrow_Left"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdoof"]
 resource_name = "Teleports"

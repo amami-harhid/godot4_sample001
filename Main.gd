@@ -31,9 +31,15 @@ func _ready():
 	Buttons.setup(layer_buttons)
 	GameLayer.setup(layer_games)
 	GameLayer.load_game()
-	Player.setup(player)
+	Player.setup(layer_player)
+	var _timer = Timer.new()
+	add_child(_timer)
+	_timer.one_shot = false # ループする
+	_timer.wait_time = 0.2  # 0.2秒おき
+	_timer.start()
+	var _animation = Callable(Player, "next_h_frame")
+	_timer.connect("timeout",_animation)
 
 func _process(delta):
-	Player.player_move()
 	pass
 

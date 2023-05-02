@@ -22,7 +22,7 @@ func find_str(val1:String, val2:String)->int:
 	return val1.find(val2,0)
 
 # 指定した秒数分スリープしたあとに与えたメソッドを実行する
-func sleep(_sec: float, _method: Callable):
+func one_shot_timer(_sec: float, _method: Callable):
 	if _sec > 0 :
 		var _timer:Timer = Timer.new()
 		add_child(_timer)
@@ -39,5 +39,5 @@ func close():
 	Messages.hide()
 
 func window_close():
-	sleep(0.5, Callable(self,"close"))
+	one_shot_timer(0.5, Callable(self,"close"))
 	main.get_tree().quit() # Gameを終わる

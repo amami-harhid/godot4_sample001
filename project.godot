@@ -20,11 +20,11 @@ config/icon="res://icon.svg"
 Commons="*res://src/common/Commons.gd"
 Messages="*res://src/common/Messages.gd"
 Buttons="*res://src/common/Buttons.gd"
-Player="*res://src/common/Player.gd"
+Player="*res://src/common/PlayerLayer.gd"
 GameLayer="*res://src/common/GameLayer.gd"
 Background="*res://src/common/Background.gd"
 Fonts="*res://src/common/Fonts.gd"
-TilePlayer="*res://src/common/TilePlayer.gd"
+Tiles="*res://src/common/Tiles.gd"
 
 [display]
 
