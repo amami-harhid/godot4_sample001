@@ -51,8 +51,13 @@ texture_region_size = Vector2i(64, 64)
 resource_name = "Levers"
 texture = ExtResource("5_ef0vf")
 texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 3
 0:0/0 = 0
 0:0/0/custom_data_0 = "Lever_Off"
+0:0/1 = 1
+0:0/1/custom_data_0 = "Lever_Off_1"
+0:0/2 = 2
+0:0/2/custom_data_0 = "Lever_Off_2"
 1:0/0 = 0
 1:0/0/custom_data_0 = "Lever_On"
 

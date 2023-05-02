@@ -13,6 +13,7 @@ const Door := 'Door'
 const Lever := 'Lever'
 const Lever_Off := 'Lever_Off'
 const Lever_On := 'Lever_On'
+const Lever_Off_1 := 'Lever_Off_1'
 
 # ドアに到達していたら Trueを返す
 func is_clear()->bool:

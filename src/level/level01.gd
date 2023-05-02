@@ -1,21 +1,21 @@
 extends TileMap
 
 
+var _is_close :bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	_is_close = false
 	Player.set_map_position(Vector2i(1,1))
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	Player.player_move()
-	change_tile()
-	if Player.is_clear():
-		var _caller:Callable = Callable(GameLayer,'level_up')
-		Commons.one_shot_timer(0.3, _caller)
-	pass
+	if not _is_close :
+		Player.player_move()
+		change_tile()
+		if Player.is_clear():
+			_is_close = true
+			var _caller:Callable = Callable(GameLayer,'level_up')
+			Commons.one_shot_timer(0.3, _caller)
 
 # タイルを変更する
 func change_tile():

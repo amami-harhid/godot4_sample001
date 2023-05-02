@@ -2,7 +2,7 @@ extends Node
 
 var layer_games:CanvasLayer
 const Game_Max_Level:int = 3
-const Game_First_Level:int = 2
+const Game_First_Level:int = 1
 const Game_Undefined_Level:int = -1
 
 var _level:int
@@ -26,6 +26,7 @@ func load_game():
 	Commons.one_shot_timer(0.5, _caller)
 
 func level_up():
+	print("start level_up _level=",_level)
 	Buttons.hide()
 	Messages.hide()
 	Player.hide()
@@ -40,6 +41,7 @@ func level_up():
 	_load_game(_level)
 
 func _load_game(_level:int):
+	print("_load_game(",_level,")")
 	var _child_count = layer_games.get_child_count()
 	if _child_count > 0:
 		# 子ノードがあるとき
