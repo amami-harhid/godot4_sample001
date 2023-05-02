@@ -13,7 +13,16 @@ func set_view_port_size(_size:Vector2):
 func get_view_port_size() -> Vector2:
 	return view_port_size
 
-func sleep(_sec: float, _caller: Callable):
+# val1に含まれる val2の位置
+# 先頭の場合 0
+# 含まれない場合は -1
+func find_str(val1:String, val2:String)->int:
+	if val1 == null || val2 == null:
+		return -1
+	return val1.find(val2,0)
+
+# 指定した秒数分スリープしたあとに与えたメソッドを実行する
+func sleep(_sec: float, _method: Callable):
 	if _sec > 0 :
 		var _timer:Timer = Timer.new()
 		add_child(_timer)
@@ -22,7 +31,7 @@ func sleep(_sec: float, _caller: Callable):
 		_timer.start()
 		await _timer.timeout # 指定した時間経過するまで停止する
 		_timer.queue_free() # タイマーを消す
-	_caller.call()
+	_method.call()
 
 func close():
 	GameLayer.hide()

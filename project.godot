@@ -24,6 +24,7 @@ Player="*res://src/common/Player.gd"
 GameLayer="*res://src/common/GameLayer.gd"
 Background="*res://src/common/Background.gd"
 Fonts="*res://src/common/Fonts.gd"
+TilePlayer="*res://src/common/TilePlayer.gd"
 
 [display]
 

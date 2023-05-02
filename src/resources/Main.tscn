@@ -17,6 +17,7 @@ script = ExtResource("1_qsujg")
 texture = ExtResource("2_vixvc")
 hframes = 4
 vframes = 4
+metadata/map_position = Vector2i(0, 0)
 
 [node name="LayerMessage" type="CanvasLayer" parent="."]
 
