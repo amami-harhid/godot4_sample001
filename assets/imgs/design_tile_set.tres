@@ -1,10 +1,11 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://d2g8g483vojox"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://d2g8g483vojox"]
 
 [ext_resource type="Texture2D" uid="uid://dudv4bmouuqo6" path="res://assets/imgs/wall.png" id="1_o4rvl"]
 [ext_resource type="Texture2D" uid="uid://cffuudkrsy1ny" path="res://assets/imgs/grasses.png" id="2_i4j54"]
 [ext_resource type="Texture2D" uid="uid://droeckf8ydirw" path="res://assets/imgs/teleport.png" id="3_u7unj"]
 [ext_resource type="Texture2D" uid="uid://bdr3t3lvy4qq8" path="res://assets/imgs/door.png" id="4_1ybc0"]
 [ext_resource type="Texture2D" uid="uid://deytn8fc728uj" path="res://assets/imgs/levers.png" id="5_ef0vf"]
+[ext_resource type="Texture2D" uid="uid://b3cdceeb4cgl8" path="res://assets/imgs/marks.png" id="6_5sqcn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g7bsi"]
 resource_name = "Wall"
@@ -61,6 +62,14 @@ texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/custom_data_0 = "Lever_On"
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wq8q"]
+texture = ExtResource("6_5sqcn")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 custom_data_layer_0/name = "タイル種別"
@@ -70,3 +79,4 @@ sources/1 = SubResource("TileSetAtlasSource_8nv48")
 sources/2 = SubResource("TileSetAtlasSource_vdoof")
 sources/3 = SubResource("TileSetAtlasSource_ixj22")
 sources/4 = SubResource("TileSetAtlasSource_elk0v")
+sources/5 = SubResource("TileSetAtlasSource_4wq8q")

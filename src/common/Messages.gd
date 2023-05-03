@@ -9,7 +9,6 @@ func setup(_layer:CanvasLayer):
 	layer_message = _layer
 	label_message = layer_message.get_node('LabelMessage')
 	_view_port_size = layer_message.get_viewport().get_window().size
-	print(_view_port_size)
 	_message_setup()
 
 func _message_setup():

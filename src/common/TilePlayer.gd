@@ -39,7 +39,6 @@ func set_map_position(_pos:Vector2i):
 	if _tilemap :
 		var _local_pos = _tilemap.map_to_local(_pos)
 		_player.position = _local_pos
-	#Player.set_map_position(_pos)
 
 func change_position_by_map():
 	var _map_position:Vector2i = _player.get_meta(Player.Map_Position_Key)
